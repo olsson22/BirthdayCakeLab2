@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonblowout = findViewById(R.id.buttonBlow);
         buttonblowout.setOnClickListener(cakecontrollerobj);
+
+        Switch candleSwitch = findViewById(R.id.switchCandles);
+        candleSwitch.setOnCheckedChangeListener(cakecontrollerobj);
+
+        SeekBar seekBarListener = findViewById(R.id.seekbarCandles);
+        seekBarListener.setOnSeekBarChangeListener(cakecontrollerobj);
 
     }
     public void goodbye(View button) {
